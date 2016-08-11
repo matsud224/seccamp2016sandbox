@@ -15,14 +15,7 @@
 #include <linux/security.h>
 
 
-struct security_opeartions camp_ops = {
-	.name = "camp"
-};
-
 static __init int camp_init(void){
-	if(register_security(&camp_ops))
-		panic("Unable to register with kernel.\n");
-
 	printk(KERN_INFO "camp: hello,lsm!");
 	return 0;
 }
