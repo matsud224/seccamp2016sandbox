@@ -1,0 +1,9 @@
+config SECURITY_CAMP
+	bool "camp"
+	depends on SECURITY
+	depends on SECCOMP
+	depends on BPF
+	depends on BPF_SYSCALL
+	select SECURITY_PATH
+	default y
+	 
